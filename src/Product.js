@@ -14,6 +14,7 @@ export default function Product({
 }) {
   const [{ basket }, dispatch] = useStateValue();
   const addTobasket = () => {
+    console.log("I dont know my name!");
     //dispatch item into data lake
     dispatch({
       type: "ADD_TO_BASKET",
@@ -47,7 +48,7 @@ export default function Product({
           (15%)
         </div>
       </div>
-      <Button onclick={addTobasket} variant="contained" color="primary">
+      <Button onClick={addTobasket} variant="contained" color="primary">
         Add to Buy
       </Button>
     </div>

@@ -17,7 +17,7 @@ export default function Home() {
           title="Testing"
           description="Hello, World"
           price={14.99}
-          rating={3}
+          rating={4}
         />
 
         {/*Product*/}

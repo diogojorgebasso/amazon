@@ -1,6 +1,10 @@
 export const initialState = {
   basket: [],
 };
+//selector
+export const GetBasketTotal = (basket) => {
+  return basket?.reduce((amount, item) => item.price + amount, 0); //summing items
+};
 const reducer = (state, action) => {
   console.log(action);
   switch (action.type) {
