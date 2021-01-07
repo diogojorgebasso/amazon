@@ -4,11 +4,13 @@ import logo from "./amazonlogo.png";
 import SearchIcon from "@material-ui/icons/Search";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
-
+import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <div className="header">
-      <img className="headerLogo" src={logo} alt="Amazon Logo" />
+      <Link to="/">
+        <img className="headerLogo" src={logo} alt="Amazon Logo" />
+      </Link>
       <div className="headerLocation">
         <LocationOnIcon />
         <div className="headerOption">
@@ -33,10 +35,12 @@ export default function Header() {
           <span className="HeaderTextUp">Your</span>
           <span className="HeaderTextDown">Prime</span>
         </div>
-        <div className="headerOptionBasket">
-          <AddShoppingCartIcon />
-          <span className="HeaderTextDown HeaderBasketCart">0</span>
-        </div>
+        <Link to="/checkout">
+          <div className="headerOptionBasket">
+            <AddShoppingCartIcon />
+            <span className="HeaderTextDown HeaderBasketCart">0</span>
+          </div>
+        </Link>
       </div>
     </div>
   );

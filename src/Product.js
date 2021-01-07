@@ -1,26 +1,28 @@
 import React from "react";
-import StarBorderOutlinedIcon from "@material-ui/icons/StarBorderOutlined";
+import StarIcon from "@material-ui/icons/Star";
 import Button from "@material-ui/core/Button";
 import "./Product.css";
 
-export default function Product() {
+export default function Product({ image, title, description, price, rating }) {
   return (
     <div className="product">
-      <img
-        src="https://images-na.ssl-images-amazon.com/images/I/61m38wVMbSL._AC_UX679_.jpg"
-        alt="RayBan"
-      />
+      <img src={image} alt={title} />
       <div className="productInfo">
-        <p>The Best Watch!</p>
-        <p>asdhas</p>
-        <div className="productStars">
-          <StarBorderOutlinedIcon />
+        <p>{title}</p>
+        <p className="productDescription">{description}</p>
+        <div className="productRating">
+          {[...Array(rating)].map((e, i) => (
+            <StarIcon key={i} />
+          ))}
         </div>
         <p className="productPrice">
           <small>R$</small>
-          <strong>19.99</strong>
+          <strong>{price}</strong>
         </p>
-        <p className="productDescount"></p>
+        <div className="productDescount">
+          De: <span className="ProductOriginalPrice">{price * (1, 15)}</span>{" "}
+          (15%)
+        </div>
       </div>
       <Button variant="contained" color="primary">
         BUY!

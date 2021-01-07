@@ -10,6 +10,7 @@
   width: 100%;
   max-width: 100px;
   max-height: 400px;
+  min-height: auto;
 }
 .product > img {
   max-height: 200px;
@@ -25,5 +26,11 @@
   margin-top: 5px;
 }
 .product > Button {
+  background-color: #f0c14b;
+}
+.ProductOriginalPrice {
+  text-decoration: line-through;
+}
+StarIcon {
   background-color: #f0c14b;
 }
