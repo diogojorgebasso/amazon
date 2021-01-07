@@ -11,22 +11,28 @@ export default function Product({
   description,
   price,
   rating,
+  addoOrRemove,
 }) {
   const [{ basket }, dispatch] = useStateValue();
-  const addTobasket = () => {
-    console.log("I dont know my name!");
+  const ActionBasket = () => {
+    console.log(addoOrRemove === "true");
     //dispatch item into data lake
-    dispatch({
-      type: "ADD_TO_BASKET",
-      item: {
-        id,
-        title,
-        description,
-        image,
-        price,
-        rating,
-      },
-    });
+    addoOrRemove === "true"
+      ? dispatch({
+          type: "ADD_TO_BASKET",
+          item: {
+            id,
+            title,
+            description,
+            image,
+            price,
+            rating,
+          },
+        })
+      : dispatch({
+          type: "REMOVE_BASKET",
+          item: { id },
+        });
   };
   return (
     <div className="product">
@@ -48,7 +54,7 @@ export default function Product({
           (15%)
         </div>
       </div>
-      <Button onClick={addTobasket} variant="contained" color="primary">
+      <Button onClick={ActionBasket} variant="contained" color="primary">
         Add to Buy
       </Button>
     </div>

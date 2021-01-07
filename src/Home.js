@@ -18,6 +18,7 @@ export default function Home() {
           description="Hello, World"
           price={14.99}
           rating={4}
+          addoOrRemove="true"
         />
 
         {/*Product*/}
