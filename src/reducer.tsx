@@ -23,7 +23,6 @@ const reducer = (state, action) => {
       } else {
         console.warn("Cant remove product. Try again.");
       }
-      console.log({...state, (basket: newBasket)});
       return {
         ...state,
         basket: newBasket,

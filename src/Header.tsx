@@ -6,7 +6,9 @@ import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
-
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+  name: string;
+}
 export default function Header() {
   const [{ basket }, dispatch] = useStateValue();
   return (
