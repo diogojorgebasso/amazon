@@ -2,8 +2,31 @@ import React from "react";
 import StarIcon from "@material-ui/icons/Star";
 import Button from "@material-ui/core/Button";
 import "./Product.css";
+import { useStateValue } from "./StateProvider";
 
-export default function Product({ image, title, description, price, rating }) {
+export default function Product({
+  id,
+  image,
+  title,
+  description,
+  price,
+  rating,
+}) {
+  const [{ basket }, dispatch] = useStateValue();
+  const addTobasket = () => {
+    //dispatch item into data lake
+    dispatch({
+      type: "ADD_TO_BASKET",
+      item: {
+        id,
+        title,
+        description,
+        image,
+        price,
+        rating,
+      },
+    });
+  };
   return (
     <div className="product">
       <img src={image} alt={title} />
@@ -24,8 +47,8 @@ export default function Product({ image, title, description, price, rating }) {
           (15%)
         </div>
       </div>
-      <Button variant="contained" color="primary">
-        BUY!
+      <Button onclick={addTobasket} variant="contained" color="primary">
+        Add to Buy
       </Button>
     </div>
   );
