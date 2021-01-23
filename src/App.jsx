@@ -14,7 +14,7 @@ function App() {
             <Checkout />
           </Route>
           <Route path="/">
-            {/*Make sure it  s the last one*/}
+            {/*Make sure it's the last one*/}
             <Home />
           </Route>
         </Switch>

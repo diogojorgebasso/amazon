@@ -5,7 +5,7 @@ import Product from "./Product";
 export default function Home() {
   return (
     <div className="home">
-      <div className="homeConteiner">
+      <div className="homeContainer">
         <img
           src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2021/NYNY/Fuji_TallHero_NYNY_pt_BR_1x._CB412256579_.jpg"
           alt=""
