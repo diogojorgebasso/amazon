@@ -1,14 +1,12 @@
 import React from "react";
 import "./Header.css";
-import logo from "./amazonlogo.png";
+import logo from "./amazonLogo.png";
 import SearchIcon from "@material-ui/icons/Search";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  name: string;
-}
+
 export default function Header() {
   const [{ basket }, dispatch] = useStateValue();
   return (
@@ -34,7 +32,7 @@ export default function Header() {
         </div>
         <div className="headerOption">
           <span className="HeaderTextUp">Return</span>
-          <span className="HeaderTextDown">& orders</span>
+          <span className="HeaderTextDown">&amp; orders</span>
         </div>
         <div className="headerOption">
           <span className="HeaderTextUp">Your</span>
