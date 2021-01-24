@@ -11,12 +11,12 @@ export default function Product({
   description,
   price,
   rating,
-  addOrRemove,
+  addItem,
 }) {
   const [{ basket }, dispatch] = useStateValue();
   const ActionBasket = () => {
     //dispatch item into data lake
-    addOrRemove
+    addItem
       ? dispatch({
           type: "ADD_TO_BASKET",
           item: {

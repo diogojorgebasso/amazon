@@ -18,6 +18,7 @@ const reducer = (state, action) => {
         (basketItem) => basketItem.id === action.id
       );
       let newBasket = [...state.basket];
+
       if (index >= 0) {
         newBasket.slice(index, 1);
       } else {
