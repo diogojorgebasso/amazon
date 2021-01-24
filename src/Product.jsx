@@ -15,9 +15,8 @@ export default function Product({
 }) {
   const [{ basket }, dispatch] = useStateValue();
   const ActionBasket = () => {
-    console.log(addOrRemove === "true");
     //dispatch item into data lake
-    addOrRemove === "true"
+    addOrRemove
       ? dispatch({
           type: "ADD_TO_BASKET",
           item: {
