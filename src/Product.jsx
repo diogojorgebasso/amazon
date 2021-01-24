@@ -14,6 +14,7 @@ export default function Product({
   addItem,
 }) {
   const [{ basket }, dispatch] = useStateValue();
+  //Responsible for adding or remove to basket.
   const ActionBasket = () => {
     //dispatch item into data lake
     addItem
@@ -54,7 +55,7 @@ export default function Product({
         </div>
       </div>
       <Button onClick={ActionBasket} variant="contained" color="primary">
-        Add to Buy
+        {addItem ? "Add to Buy" : "Remove item"}
       </Button>
     </div>
   );

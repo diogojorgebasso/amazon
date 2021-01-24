@@ -13,6 +13,7 @@ export default function Home() {
       </div>
       <div className="homeRow">
         <Product
+          id={1234}
           image="https://images-na.ssl-images-amazon.com/images/I/61m38wVMbSL._AC_UX679_.jpg"
           title="Testing"
           description="Hello, World"

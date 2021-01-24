@@ -6,7 +6,6 @@ export const GetBasketTotal = (basket) => {
   return basket?.reduce((amount, item) => item.price + amount, 0); //summing items
 };
 const reducer = (state, action) => {
-  console.log(action);
   switch (action.type) {
     case "ADD_TO_BASKET":
       return {
@@ -22,7 +21,7 @@ const reducer = (state, action) => {
       if (index >= 0) {
         newBasket.slice(index, 1);
       } else {
-        console.warn("Cant remove product. Try again.");
+        console.warn(`Cant remove product with ${action.id}. Try again.`);
       }
       return {
         ...state,

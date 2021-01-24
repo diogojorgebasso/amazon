@@ -9,9 +9,7 @@ export default function Checkout() {
   return (
     <div className="checkout">
       <div className="checkoutItens">
-        <h2 id="checkoutTitle">
-          Seu carrinho de compras da Amazon está vazio.
-        </h2>
+        <h2 id="checkoutTitle">Seu carrinho de compras da Amazon:</h2>
         {basket?.map((item, index) => (
           <Product
             key={index}
