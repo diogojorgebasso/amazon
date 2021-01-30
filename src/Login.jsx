@@ -4,8 +4,12 @@ import VisibilityIcon from "@material-ui/icons/Visibility";
 import IconButton from "@material-ui/core/IconButton";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import "./login.css";
+import { auth } from "./firebase";
 import logo from "./amazonLogo.png";
+import { Link, useHistory } from "react-router-dom";
+
 export default function Login() {
+  const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -13,19 +17,36 @@ export default function Login() {
 
   const singIn = (event) => {
     event.preventDefault();
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((auth) => {
+        history.push("/");
+      })
+      .catch((err) => alert(err.message));
   };
 
   const register = (event) => {
     event.preventDefault();
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((auth) => {
+        console.log(auth);
+        if (auth) {
+          history.push("/");
+        }
+      })
+      .catch((error) => console.warn(error));
   };
   return (
     <div className="login">
-      <img className="loginLogo" alt="amazon's logo" src={logo} />
+      <Link to="/">
+        <img className="loginLogo" alt="amazon's logo" src={logo} />
+      </Link>
       <div className="loginContainer">
         <h1>Fazer login</h1>
         <form action="">
           <section id="email">
-            <label for="email">Email</label>
+            <label htmlFor="email">Email</label>
             <input
               maxLength="128"
               id="email"
@@ -33,28 +54,28 @@ export default function Login() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              autocomplete="email"
+              autoComplete="email"
               required
             />
           </section>
 
           <section>
-            <label for="password">Password</label>
+            <label htmlFor="password">Password</label>
             <div id="divPassword">
               <input
                 id="password"
                 name="password"
                 type="password"
-                autocomplete="new-password"
+                autoComplete="new-password"
                 minLength="8"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 aria-describedby="password-constraints"
                 required
               />
-              <IconButton aria-label="Show password">
+              {/*<IconButton aria-label="Show password">
                 <VisibilityIcon />
-              </IconButton>
+  </IconButton>*/}
             </div>
             <div id="password-constraints">Eight or more characters.</div>
           </section>

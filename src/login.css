@@ -28,8 +28,8 @@ label {
   display: block;
 }
 
-.loginContainer > form > input {
-  height: 50px;
+input {
+  height: 30px;
   margin-bottom: 10px;
   background-color: white;
   width: 98%;
