@@ -80,7 +80,7 @@ export default function Login() {
             <div id="password-constraints">Eight or more characters.</div>
           </section>
 
-          <Button onClick={singIn} variant="contained" color="#FF9900">
+          <Button onClick={singIn} variant="contained" color="primary">
             Log-in
           </Button>
           <p>
