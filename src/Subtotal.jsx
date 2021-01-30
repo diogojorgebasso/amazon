@@ -6,7 +6,7 @@ import { useStateValue } from "./StateProvider";
 import { GetBasketTotal } from "./reducer";
 import("./Subtotal.css");
 export default function Subtotal() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket }] = useStateValue();
 
   return (
     <div className="subtotal">

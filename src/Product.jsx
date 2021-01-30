@@ -13,7 +13,7 @@ export default function Product({
   rating,
   addItem,
 }) {
-  const [{ basket }, dispatch] = useStateValue();
+  const [, dispatch] = useStateValue();
   //Responsible for adding or remove to basket.
   const ActionBasket = () => {
     //dispatch item into data lake
