@@ -1,8 +1,8 @@
 import React from "react";
-import StarIcon from "@material-ui/icons/Star";
 import Button from "@material-ui/core/Button";
 import "./Product.css";
 import { useStateValue } from "./StateProvider";
+import StarModal from "./starModal";
 
 export default function Product({
   id,
@@ -42,10 +42,7 @@ export default function Product({
         <h4>{title}</h4>
         <p className="productDescription">{description}</p>
         <div className="productRating">
-          {[...Array(rating)].map((i) => (
-            <StarIcon className="starsRating" key={i} />
-          ))}
-          <div className="numberRatings">10</div>
+          <StarModal rating={rating} />
         </div>
         <p className="productPrice">
           <small>R$</small>
