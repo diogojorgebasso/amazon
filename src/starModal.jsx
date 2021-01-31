@@ -34,7 +34,7 @@ export default function StarModal({ rating }) {
   const open = Boolean(anchorEl);
 
   return (
-    <>
+    <div style={{ margin: "auto" }}>
       <Typography
         aria-owns={open ? "mouse-over-popover" : undefined}
         aria-haspopup="true"
@@ -71,6 +71,6 @@ export default function StarModal({ rating }) {
       >
         <Typography>Unique evaluations graph</Typography>
       </Popover>
-    </>
+    </div>
   );
 }

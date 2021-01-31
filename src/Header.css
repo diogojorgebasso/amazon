@@ -26,6 +26,8 @@
   padding: 10px;
   border: none;
   width: 100%;
+  outline: none;
+  appearance: textfield;
 }
 .headerSearchIcon {
   padding: 5px;

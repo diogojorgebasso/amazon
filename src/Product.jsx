@@ -2,7 +2,7 @@ import React from "react";
 import Button from "@material-ui/core/Button";
 import "./Product.css";
 import { useStateValue } from "./StateProvider";
-import StarModal from "./starModal";
+import StarModal from "./StarModal";
 
 export default function Product({
   id,
@@ -44,12 +44,12 @@ export default function Product({
         <div className="productRating">
           <StarModal rating={rating} />
         </div>
-        <p className="productPrice">
+        <div className="productPrice">
           <small>R$</small>
-          <strong>{price}</strong>
-        </p>
+          <h4>{price}</h4>
+        </div>
         <div className="productDiscount">
-          De: <span className="ProductOriginalPrice">{price * (1, 15)}</span>
+          <span className="ProductOriginalPrice">{price * (1, 15)}</span>
           (15%)
         </div>
       </div>

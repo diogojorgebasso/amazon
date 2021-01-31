@@ -1,10 +1,8 @@
 .product {
-  display: flex;
-  flex-direction: column;
   background-color: white;
   z-index: 1;
   align-items: center;
-  justify-content: flex-end;
+  margin: auto;
   margin: 10px;
   padding: 20px;
   width: 100%;
@@ -23,21 +21,21 @@
   height: auto;
   margin-bottom: 15px;
 }
+
 .productPrice {
+  display: flex;
+  align-items: center;
   margin-top: 5px;
-  font-size: medium;
 }
+
 .product > Button {
   background-color: #f0c14b;
+  margin-top: 10px;
 }
+
 .ProductOriginalPrice {
   text-decoration: line-through;
 }
 
-.buttonProduct {
-  margin-top: 20px;
-}
-
 .productRating {
-  display: flex;
 }
