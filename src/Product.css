@@ -10,6 +10,7 @@
   max-height: 500px;
   min-height: auto;
 }
+
 .product > img {
   max-height: 200px;
   width: 100%;
@@ -35,7 +36,4 @@
 
 .ProductOriginalPrice {
   text-decoration: line-through;
-}
-
-.productRating {
 }
