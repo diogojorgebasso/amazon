@@ -11,14 +11,17 @@ export default function Checkout() {
       <div className="checkoutItens">
         <h2 id="checkoutTitle">Seu carrinho de compras da Amazon:</h2>
         {basket?.map((item, index) => (
-          <Product
-            key={index}
-            id={item.id}
-            title={item.title}
-            image={item.image}
-            price={item.price}
-            rating={item.rating}
-          />
+          <>
+            <Product
+              key={index}
+              id={item.id}
+              title={item.title}
+              image={item.image}
+              price={item.price}
+              rating={item.rating}
+            />
+            <p>{item.id}</p>
+          </>
         ))}
       </div>
       <div className="checkoutSubtotal">

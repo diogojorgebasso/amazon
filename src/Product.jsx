@@ -34,27 +34,34 @@ export default function Product({
           item: { id },
         });
   };
+
   return (
     <div className="product">
       <img src={image} alt={title} />
       <div className="productInfo">
-        <p>{title}</p>
+        <h4>{title}</h4>
         <p className="productDescription">{description}</p>
         <div className="productRating">
-          {[...Array(rating)].map((e, i) => (
-            <StarIcon key={i} />
+          {[...Array(rating)].map((i) => (
+            <StarIcon className="starsRating" key={i} />
           ))}
+          <div className="numberRatings">10</div>
         </div>
         <p className="productPrice">
           <small>R$</small>
           <strong>{price}</strong>
         </p>
         <div className="productDiscount">
-          De: <span className="ProductOriginalPrice">{price * (1, 15)}</span>{" "}
+          De: <span className="ProductOriginalPrice">{price * (1, 15)}</span>
           (15%)
         </div>
       </div>
-      <Button onClick={ActionBasket} variant="contained" color="primary">
+      <Button
+        className="buttonProduct"
+        onClick={ActionBasket}
+        variant="contained"
+        color="primary"
+      >
         {addItem ? "Add to Buy" : "Remove item"}
       </Button>
     </div>
