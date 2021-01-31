@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Checkout from "./Checkout";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
-
+import Payment from "./Payment";
 function App() {
   const [{}, dispatch] = useStateValue();
   useEffect(() => {
@@ -38,10 +38,15 @@ function App() {
 
             <Checkout />
           </Route>
-          <Route path="/">
+
+          <Route path="/payment">
             <Header />
 
+            <Payment />
+          </Route>
+          <Route path="/">
             {/*Make sure it's the last one*/}
+            <Header />
             <Home />
           </Route>
         </Switch>

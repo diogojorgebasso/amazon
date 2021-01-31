@@ -37,7 +37,9 @@ export default function Header() {
       <div className="headerNav">
         <Link to={!user && "/login"}>
           <div onClick={handleSign} className="headerOption">
-            <span className="HeaderTextUp">Hello Guest</span>
+            <span className="HeaderTextUp">
+              Hello {!user ? "Guest" : user.email}
+            </span>
             <span className="HeaderTextDown">
               {user ? "Sign Out" : "Sign In"}
             </span>
