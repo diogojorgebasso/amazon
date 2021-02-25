@@ -8,8 +8,9 @@ import Checkout from "./Checkout";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
 import Payment from "./Payment";
+
 function App() {
-  const [{}, dispatch] = useStateValue();
+  const [, dispatch] = useStateValue();
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       console.log(authUser);
@@ -26,6 +27,7 @@ function App() {
       }
     });
   }, []);
+
   return (
     <Router>
       <div className="App">

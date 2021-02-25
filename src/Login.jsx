@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Button from "@material-ui/core/Button";
-import VisibilityIcon from "@material-ui/icons/Visibility";
-import IconButton from "@material-ui/core/IconButton";
+//import VisibilityIcon from "@material-ui/icons/Visibility";
+//import IconButton from "@material-ui/core/IconButton";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import "./login.css";
-import { auth } from "./firebase";
+import { auth, signInWithGoogle } from "./firebase";
 import logo from "./amazonLogo.png";
 import { Link, useHistory } from "react-router-dom";
 
@@ -12,8 +12,6 @@ export default function Login() {
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  //const [showPassword, setShowPassword] = useState(false);
 
   const singIn = (event) => {
     event.preventDefault();
@@ -79,7 +77,18 @@ export default function Login() {
             </div>
             <div id="password-constraints">Eight or more characters.</div>
           </section>
-
+          <section>
+            <label htmlFor="">Sign In With Google</label>
+            <div className="login-buttons">
+              <Button
+                variant="contained"
+                color="secondary"
+                onClick={signInWithGoogle}
+              >
+                Login Google!
+              </Button>
+            </div>
+          </section>
           <Button onClick={singIn} variant="contained" color="primary">
             Log-in
           </Button>

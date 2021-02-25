@@ -1,6 +1,5 @@
 import React from "react";
 import CurrencyFormat from "react-currency-format";
-//import { useHistory } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import { useStateValue } from "./StateProvider";
 import { getBasketTotal } from "./reducer";

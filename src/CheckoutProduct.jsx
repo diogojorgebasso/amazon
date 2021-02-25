@@ -1,6 +1,7 @@
 import React from "react";
 import "./Product.css";
 import { useStateValue } from "./StateProvider";
+import Button from "@material-ui/core/Button";
 
 export default function CheckoutProduct({
   id,
@@ -38,7 +39,7 @@ export default function CheckoutProduct({
             ))}
         </div>
         {!hideButton && (
-          <button onClick={removeFromBasket}>Remove from Basket</button>
+          <Button onClick={removeFromBasket}>Remove from Basket</Button>
         )}
       </div>
     </div>
