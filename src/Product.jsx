@@ -11,28 +11,22 @@ export default function Product({
   description,
   price,
   rating,
-  addItem,
 }) {
   const [, dispatch] = useStateValue();
   //Responsible for adding or remove to basket.
   const ActionBasket = () => {
     //dispatch item into data lake
-    addItem
-      ? dispatch({
-          type: "ADD_TO_BASKET",
-          item: {
-            id,
-            title,
-            description,
-            image,
-            price,
-            rating,
-          },
-        })
-      : dispatch({
-          type: "REMOVE_BASKET",
-          item: { id },
-        });
+    dispatch({
+      type: "ADD_TO_BASKET",
+      item: {
+        id,
+        title,
+        description,
+        image,
+        price,
+        rating,
+      },
+    });
   };
 
   return (
@@ -59,7 +53,7 @@ export default function Product({
         variant="contained"
         color="primary"
       >
-        {addItem ? "Add to Buy" : "Remove item"}
+        Add to Buy
       </Button>
     </div>
   );

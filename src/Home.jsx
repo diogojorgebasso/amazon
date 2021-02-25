@@ -20,7 +20,6 @@ export default function Home() {
           description="Este óculos irá revolucionar a sua visão!"
           price={14.99}
           rating={4}
-          addItem
         />
 
         {/*Product*/}
@@ -34,7 +33,6 @@ export default function Home() {
           description="Hello, World"
           price={14.99}
           rating={4}
-          addItem
         />{" "}
         {/*Product*/}
         {/*Product*/}
@@ -48,7 +46,6 @@ export default function Home() {
           description="Hello, World"
           price={14.99}
           rating={4}
-          addItem
         />{" "}
         {/*Product*/}
       </div>
@@ -60,7 +57,6 @@ export default function Home() {
           description="Hello, World"
           price={14.99}
           rating={4}
-          addItem
         />{" "}
         {/*Product*/}
         {/*Product*/}

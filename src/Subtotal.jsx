@@ -3,7 +3,7 @@ import CurrencyFormat from "react-currency-format";
 //import { useHistory } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import { useStateValue } from "./StateProvider";
-import { GetBasketTotal } from "./reducer";
+import { getBasketTotal } from "./reducer";
 import { useHistory } from "react-router-dom";
 import("./Subtotal.css");
 export default function Subtotal() {
@@ -26,7 +26,7 @@ export default function Subtotal() {
           </>
         )}
         decimalScale={2}
-        value={GetBasketTotal(basket)} // Part of the homework
+        value={getBasketTotal(basket)} // Part of the homework
         displayType={"text"}
         thousandSeparator={true}
         prefix={"R$"}

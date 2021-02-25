@@ -13,7 +13,7 @@ export default function Payment() {
             <h3>Delivery Address</h3>
           </div>
           <div className="paymentAddress">
-            <h3>Delivery Address</h3>
+            <p>{user?.email}</p>
           </div>
         </div>
         <div className="paymentSection">
