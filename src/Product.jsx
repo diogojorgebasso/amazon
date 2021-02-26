@@ -43,7 +43,9 @@ export default function Product({
           <h4>{price}</h4>
         </div>
         <div className="productDiscount">
-          <span className="ProductOriginalPrice">{price * (1, 15)}</span>
+          <span className="ProductOriginalPrice">
+            {(price * 1.15).toFixed(2)}
+          </span>
           (15%)
         </div>
       </div>

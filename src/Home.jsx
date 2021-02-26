@@ -16,9 +16,9 @@ export default function Home() {
           id={1233}
           image="https://images-na.ssl-images-amazon.com/images/I/61m38wVMbSL._AC_UX679_.jpg"
           title="Óculos Ray-Ban original"
-          author="Ray-Ban Brasil"
+          author="Ray-Ban Farsificado"
           description="Este óculos irá revolucionar a sua visão!"
-          price={14.99}
+          price={18.99}
           rating={4}
         />
 
@@ -29,9 +29,9 @@ export default function Home() {
         <Product
           id={1234}
           image="https://images-na.ssl-images-amazon.com/images/I/61m38wVMbSL._AC_UX679_.jpg"
-          title="Testing"
+          title="TV LG"
           description="Hello, World"
-          price={14.99}
+          price={22.99}
           rating={4}
         />{" "}
         {/*Product*/}

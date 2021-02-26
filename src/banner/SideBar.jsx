@@ -18,7 +18,7 @@ export default function SidebarExample() {
         style={{
           padding: "10px",
           width: "40%",
-          background: "#f0f0f0",
+          background: "#232f3e",
         }}
       >
         <ul style={{ listStyleType: "none", padding: 0 }}>
