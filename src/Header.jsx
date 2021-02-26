@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-import logo from "./amazonLogo.png";
+import logo from "./amazonLogo.png"; //FIXME: error in github actions?
 import SearchIcon from "@material-ui/icons/Search";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
@@ -32,7 +32,11 @@ export default function Header() {
         </div>
       </div>
       <div className="headerSearch">
-        <input type="text" className="headerSearchInput" />
+        <input
+          type="text"
+          placeholder="Type here..."
+          className="headerSearchInput"
+        />
         <SearchIcon className="headerSearchIcon" />
       </div>
       <div className="headerNav">

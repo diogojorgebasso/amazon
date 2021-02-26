@@ -37,6 +37,7 @@ export default function Payment() {
     setProcessing(true);
     const payload = await stripe
       .confirmCardPayment(clientSecret, {
+        //the response is "null" from stripe
         payment_method: {
           card: elements.getElement(CardElement),
         },

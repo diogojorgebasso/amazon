@@ -26,10 +26,10 @@ export default function SidebarExample() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/bubblegum">Bubblegum</Link>
+            <Link to="/food/bubblegum">Bubblegum</Link>
           </li>
           <li>
-            <Link to="/shoelaces">Shoelaces</Link>
+            <Link to="/shoelaces">Shoes</Link>
           </li>
         </ul>
       </div>
