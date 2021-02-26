@@ -1,6 +1,5 @@
 import React from "react";
 import "./Header.css";
-import logo from "./amazonLogo.png"; //FIXME: error in github actions?
 import SearchIcon from "@material-ui/icons/Search";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
@@ -22,7 +21,11 @@ export default function Header() {
   return (
     <div className="header">
       <Link to="/">
-        <img className="headerLogo" src={logo} alt="Amazon Logo" />
+        <img
+          className="headerLogo"
+          src={require("./logo.png")}
+          alt="Amazon Logo"
+        />
       </Link>
       <div className="headerLocation">
         <LocationOnIcon />
