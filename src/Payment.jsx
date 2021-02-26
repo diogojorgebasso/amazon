@@ -35,6 +35,8 @@ export default function Payment() {
     getClientSecret();
   }, [basket]);
 
+  console.log("client secret >>> ", clientSecret);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     setProcessing(true);

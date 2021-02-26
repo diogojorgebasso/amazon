@@ -43,11 +43,11 @@ export default function StarModal({ rating }) {
       >
         <div style={{ display: "flex" }}>
           <div className="stars">
-            {[...Array(rating)].map((i) => (
+            {[...Array(rating)].map((_, i) => (
               <StarIcon key={i} />
             ))}
           </div>
-          <div className="numberStars">10</div> {/*Get from the database */}
+          <div className="numberStars">10</div> {/*Get from the backend */}
         </div>
       </Typography>
       <Popover

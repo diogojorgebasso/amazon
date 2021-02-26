@@ -7,6 +7,7 @@ import LocationOnIcon from "@material-ui/icons/LocationOn";
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 import { auth } from "./firebase";
+
 export default function Header() {
   const [{ basket, user }] = useStateValue();
   function showAlert() {
@@ -27,7 +28,7 @@ export default function Header() {
         <LocationOnIcon />
         <div className="headerOption">
           <span className="HeaderTextUp">Hello</span>
-          <span className="HeaderTextDown">Select Adress</span>
+          <span className="HeaderTextDown">Select Address</span>
         </div>
       </div>
       <div className="headerSearch">
@@ -49,10 +50,12 @@ export default function Header() {
           <span className="HeaderTextUp">Return</span>
           <span className="HeaderTextDown">&amp; orders</span>
         </div>
-        <div className="headerOption">
-          <span className="HeaderTextUp">Your</span>
-          <span className="HeaderTextDown">Prime</span>
-        </div>
+        <Link to="/orders">
+          <div className="headerOption">
+            <span className="HeaderTextUp">Your</span>
+            <span className="HeaderTextDown">Prime</span>
+          </div>
+        </Link>
         <Link to="/checkout">
           <div className="headerOptionBasket">
             <AddShoppingCartIcon />
