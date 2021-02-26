@@ -5,7 +5,6 @@ import Button from "@material-ui/core/Button";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import "./login.css";
 import { auth, signInWithGoogle } from "./firebase";
-import logo from "./amazonLogo.png";
 import { Link, useHistory } from "react-router-dom";
 
 export default function Login() {
@@ -38,7 +37,11 @@ export default function Login() {
   return (
     <div className="login">
       <Link to="/">
-        <img className="loginLogo" alt="amazon's logo" src={logo} />
+        <img
+          className="loginLogo"
+          alt="amazon's logo"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1000px-Amazon_logo.svg.png"
+        />
       </Link>
       <div className="loginContainer">
         <h1>Fazer login</h1>

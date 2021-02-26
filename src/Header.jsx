@@ -6,7 +6,7 @@ import LocationOnIcon from "@material-ui/icons/LocationOn";
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 import { auth } from "./firebase";
-
+let logo = require("./logo.png");
 export default function Header() {
   const [{ basket, user }] = useStateValue();
   function showAlert() {
@@ -21,11 +21,7 @@ export default function Header() {
   return (
     <div className="header">
       <Link to="/">
-        <img
-          className="headerLogo"
-          src={require("./logo.png")}
-          alt="Amazon Logo"
-        />
+        <img className="headerLogo" src={logo} alt="Amazon Logo" />
       </Link>
       <div className="headerLocation">
         <LocationOnIcon />
