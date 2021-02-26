@@ -1,12 +1,13 @@
 import React from "react";
 import "./Header.css";
+import logo from "./logo.png";
 import SearchIcon from "@material-ui/icons/Search";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 import { auth } from "./firebase";
-let logo = require("./logo.png");
+
 export default function Header() {
   const [{ basket, user }] = useStateValue();
   function showAlert() {
