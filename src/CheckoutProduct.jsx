@@ -2,6 +2,7 @@ import React from "react";
 import "./Product.css";
 import { useStateValue } from "./StateProvider";
 import Button from "@material-ui/core/Button";
+import StarModal from "./StarModal";
 
 export default function CheckoutProduct({
   id,
@@ -31,13 +32,7 @@ export default function CheckoutProduct({
           <small>$</small>
           <strong>{price}</strong>
         </p>
-        <div className="checkoutProduct__rating">
-          {Array(rating)
-            .fill()
-            .map((_, i) => (
-              <p key={i}>🌟</p>
-            ))}
-        </div>
+        <StarModal rating={rating} />
         {!hideButton && (
           <Button onClick={removeFromBasket}>Remove from Basket</Button>
         )}

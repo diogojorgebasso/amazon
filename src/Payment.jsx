@@ -14,7 +14,10 @@ export default function Payment() {
           </div>
           <div className="paymentAddress">
             <p>{user?.email}</p>
+            <p>{user?.email}</p>
+            <p>{user?.email}</p>
           </div>
+          <div className="reviewItems"></div>
         </div>
         <div className="paymentSection">
           {" "}
